@@ -1,0 +1,35 @@
+---
+- hosts: all
+  become: yes
+
+  vars:
+    distros:
+      - Debian9
+      - Debian10
+      - RedHat7
+      - RedHat8
+      - Fedora30
+      - Fedora31
+      - Fedora32
+      - Ubuntu16
+      - Ubuntu18
+      - Ubuntu20
+
+  tasks:
+    - debug:
+        msg: >-
+          Testing with Ansible {{ ansible_version.full }} using Python {{ ansible_facts.python_version }}
+          on {{ ansible_facts.distribution }} {{ ansible_facts.distribution_version }}
+
+    - name: Wait for systemd                    # noqa 303
+      command: systemctl is-system-running
+      register: systemd_status
+      until: systemd_status.stdout is search('running|degraded')
+      retries: 30
+      when: ansible_facts.service_mgr == 'systemd'
+      changed_when: no
+      failed_when: systemd_status.rc > 1
+
+    - include_role:
+        name: fish
+      when: ansible_facts.distribution ~ ansible_facts.distribution_major_version in distros

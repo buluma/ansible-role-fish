@@ -1,0 +1,33 @@
+---
+- hosts: all
+  become: no
+  gather_facts: yes
+
+  vars:
+    distros:
+      - Debian9
+      - Debian10
+      - RedHat7
+      - RedHat8
+      - Fedora30
+      - Fedora31
+      - Fedora32
+      - Ubuntu16
+      - Ubuntu18
+      - Ubuntu20
+
+  tasks:
+    - name: Verify
+      when: ansible_facts.distribution ~ ansible_facts.distribution_major_version in distros
+      block:
+        - name: Get fish version
+          command: fish --version
+          register: fish_version_check
+          changed_when: no
+
+        - name: Ensure proper fish version is installed
+          ansible.builtin.assert:
+            that:
+              - fish_version is version('3', '==')
+          vars:
+            fish_version: "{{ fish_version_check.stdout.split(' ')[-1].split('.')[0] }}"

@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install the Friendly Interactive Shell (fish)
+  homepage: https://buluma.github.io/
+  topics: system, shell, fish, ansible, molecule, tox, playbook, hacktoberfest
