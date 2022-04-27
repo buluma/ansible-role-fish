@@ -31,5 +31,5 @@
       failed_when: systemd_status.rc > 1
 
     - include_role:
-        name: fish
+        name: ansible-role-fish
       when: ansible_facts.distribution ~ ansible_facts.distribution_major_version in distros
