@@ -28,22 +28,9 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
       - Ubuntu20
 
   tasks:
-    - debug:
-        msg: >-
-          Testing with Ansible {{ ansible_version.full }} using Python {{ ansible_facts.python_version }}
-          on {{ ansible_facts.distribution }} {{ ansible_facts.distribution_version }}
-
-    - name: Wait for systemd                    # noqa 303
-      command: systemctl is-system-running
-      register: systemd_status
-      until: systemd_status.stdout is search('running|degraded')
-      retries: 30
-      when: ansible_facts.service_mgr == 'systemd'
-      changed_when: no
-      failed_when: systemd_status.rc > 1
 
     - include_role:
-        name: fish
+        name: buluma.fish
       when: ansible_facts.distribution ~ ansible_facts.distribution_major_version in distros
 ```
 
