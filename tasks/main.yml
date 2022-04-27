@@ -1,6 +1,7 @@
 ---
 
-- debug:
+- name: Print base msg
+  debug:
     msg: >-
       Testing with Ansible {{ ansible_version.full }} using Python {{ ansible_facts.python_version }}
       on {{ ansible_facts.distribution }} {{ ansible_facts.distribution_version }}
