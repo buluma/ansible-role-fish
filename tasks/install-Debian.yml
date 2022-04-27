@@ -9,6 +9,13 @@
   tags:
     - fish
 
+- name: debian | ensure dependencies are present.
+  ansible.builtin.apt:
+    name:
+      - apt-transport-https
+      - gnupg2
+    state: present
+
 - name: debian | add fish repository key
   ansible.builtin.apt_key:
     keyserver: "{{ _fish_apt_keyserver | default(omit) }}"
