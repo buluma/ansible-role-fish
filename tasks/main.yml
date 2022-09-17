@@ -15,13 +15,13 @@
   changed_when: no
   failed_when: systemd_status.rc > 1
 
-- name: ensure fish version is valid
+- name: Ensure fish version is valid
   ansible.builtin.assert:
     that:
       - fish_release_version in _fish_valid_versions
     fail_msg: Invalid fish_release_version '{{ fish_release_version }}'. Valid versions are {{ _fish_valid_versions | join(', ') }}.
 
-- name: include distribution specific variables
+- name: Include distribution specific variables
   ansible.builtin.include_vars: "{{ lookup('first_found', params) }}"
   vars:
     params:
