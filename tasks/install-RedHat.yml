@@ -1,5 +1,5 @@
 ---
-- name: install-RedHat | require fish >=3 for newer RHEL
+- name: install-RedHat | Require fish >=3 for newer RHEL
   ansible.builtin.fail:
     msg: Only fish >= 3 is supported on RHEL >= 8
   when:
@@ -9,7 +9,7 @@
   tags:
     - fish
 
-- name: install-RedHat | require fish >=3 for newer Fedora
+- name: install-RedHat | Require fish >=3 for newer Fedora
   ansible.builtin.fail:
     msg: Only fish >= 3 is supported on Fedora >= 28
   when:
@@ -19,7 +19,7 @@
   tags:
     - fish
 
-- name: install-RedHat | create yum repo
+- name: install-RedHat | Create yum repo
   ansible.builtin.yum_repository:
     name: shells_fish_release_{{ fish_release_version }}
     description: Fish shell - {{ fish_release_version }}.x release series ({{ _fish_repo_version_string }})
@@ -31,7 +31,7 @@
   tags:
     - fish
 
-- name: install-RedHat | install fish
+- name: install-RedHat | Install fish
   action: "{{ ansible_facts.pkg_mgr }}"
   args:
     name: fish
