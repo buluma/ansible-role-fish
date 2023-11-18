@@ -35,6 +35,6 @@
   action: "{{ ansible_facts.pkg_mgr }}"
   args:
     name: fish
-    state: latest
+    state: "3.6.1"
   tags:
     - fish

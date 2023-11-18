@@ -1,10 +1,10 @@
-# [fish](#fish)
+# [Ansible role fish](#fish)
 
 Install the Friendly Interactive Shell (fish)
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-fish/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-fish/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-fish/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-fish)|[![quality](https://img.shields.io/ansible/quality/58978)](https://galaxy.ansible.com/buluma/fish)|[![downloads](https://img.shields.io/ansible/role/d/58978)](https://galaxy.ansible.com/buluma/fish)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-fish/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-fish/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-fish/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-fish)|[![downloads](https://img.shields.io/ansible/role/d/4711)](https://galaxy.ansible.com/buluma/fish)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -70,7 +70,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
 
-The minimum version of Ansible required is 2.1, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
