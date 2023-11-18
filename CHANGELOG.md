@@ -4,6 +4,11 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-fish/compare/0.1.2...HEAD)
 
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#12](https://github.com/buluma/ansible-role-fish/issues/12)
+- Update action [\#11](https://github.com/buluma/ansible-role-fish/issues/11)
+
 **Merged pull requests:**
 
 - Bump buluma/molecule-action from 5.0.1 to 5.0.4 [\#5](https://github.com/buluma/ansible-role-fish/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
