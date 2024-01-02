@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-fish/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-fish/compare/0.1.2...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-fish/compare/0.1.3...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#16](https://github.com/buluma/ansible-role-fish/issues/16)
+
+## [0.1.3](https://github.com/buluma/ansible-role-fish/tree/0.1.3) (2023-11-18)
+
+[Full Changelog](https://github.com/buluma/ansible-role-fish/compare/0.1.2...0.1.3)
 
 **Closed issues:**
 
