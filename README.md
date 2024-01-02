@@ -1,10 +1,10 @@
-# [Ansible role fish](#fish)
+# Ansible role [fish](https://galaxy.ansible.com/ui/standalone/roles/buluma/fish/documentation)
 
 Install the Friendly Interactive Shell (fish)
 
-|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-fish/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-fish/actions/workflows/molecule.yml)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-fish/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-fish)|[![downloads](https://img.shields.io/ansible/role/d/4711)](https://galaxy.ansible.com/buluma/fish)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/pulls/)|
+|GitHub|Version|Issues|Pull Requests|Downloads|
+|------|-------|------|-------------|---------|
+|[![github](https://github.com/buluma/ansible-role-fish/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-fish/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/fish)](https://galaxy.ansible.com/ui/standalone/roles/buluma/fish/documentation)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -84,14 +84,9 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-[Apache 2.0](https://github.com/buluma/ansible-role-fish/blob/master/LICENSE).
+[Apache 2.0](https://github.com/buluma/ansible-role-fish/blob/master/LICENSE)
 
 ## [Author Information](#author-information)
 
-[Michael Buluma](https://buluma.github.io/)
+[Shadow Walker](https://buluma.github.io/)
 
-Please consider [sponsoring me](https://github.com/sponsors/buluma).
-
-### [Special Thanks](#special-thanks)
-
-Template inspired by [Robert de Bock](https://github.com/robertdebock)
