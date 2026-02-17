@@ -4,6 +4,11 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-fish/compare/0.3.0...HEAD)
 
+**Closed issues:**
+
+- Update action [\#15](https://github.com/buluma/ansible-role-fish/issues/15)
+- rebuild action [\#14](https://github.com/buluma/ansible-role-fish/issues/14)
+
 **Merged pull requests:**
 
 - Bump actions/checkout from 4 to 6 [\#31](https://github.com/buluma/ansible-role-fish/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
