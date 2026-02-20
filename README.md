@@ -1,10 +1,10 @@
-# Ansible role [fish](https://galaxy.ansible.com/ui/standalone/roles/buluma/fish/documentation)
+# [Ansible role fish](#ansible-role-fish)
 
 Install the Friendly Interactive Shell (fish)
 
-|GitHub|Version|Issues|Pull Requests|Downloads|
-|------|-------|------|-------------|---------|
-|[![github](https://github.com/buluma/ansible-role-fish/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-fish/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/fish)](https://galaxy.ansible.com/ui/standalone/roles/buluma/fish/documentation)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/buluma/ansible-role-fish/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-fish/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-fish/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-fish)|[![downloads](https://img.shields.io/ansible/role/d/buluma/fish)](https://galaxy.ansible.com/buluma/fish)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-fish.svg)](https://github.com/buluma/ansible-role-fish/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -13,7 +13,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ```yaml
 ---
 - hosts: all
-  become: yes
+  become: true
 
   vars:
     distros:
@@ -31,7 +31,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   tasks:
 
     - include_role:
-        name: buluma.fish
+        name: ansible-role-fish
       when: ansible_facts.distribution ~ ansible_facts.distribution_major_version in distros
 ```
 
@@ -41,8 +41,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
   serial: 30%
 
   roles:
@@ -68,16 +68,15 @@ fish_release_version: 3
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | Version |
+| Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Ansible Molecule](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
 
 ## [Context](#context)
 
-This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
+This role is part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
 
 Here is an overview of related roles:
-
 ![dependencies](https://raw.githubusercontent.com/buluma/ansible-role-fish/png/requirements.png "Dependencies")
 
 ## [Compatibility](#compatibility)
@@ -86,28 +85,24 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
-|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
-|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
-|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
+|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|all|
+|[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
+|[Debian](https://hub.docker.com/r/buluma/debian)|all|
+|[Fedora](https://hub.docker.com/r/buluma/fedora)|all|
 
-The minimum version of Ansible required is 2.12, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done on:
 
 - The previous version.
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-fish/issues)
-
-## [Changelog](#changelog)
-
-[Role History](https://github.com/buluma/ansible-role-fish/blob/master/CHANGELOG.md)
+If you find issues, please register them on [GitHub](https://github.com/buluma/ansible-role-fish/issues).
 
 ## [License](#license)
 
-[Apache 2.0](https://github.com/buluma/ansible-role-fish/blob/master/LICENSE)
+[Apache 2.0](https://github.com/buluma/ansible-role-fish/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
-[Shadow Walker](https://buluma.github.io/)
+[Michael Buluma](https://buluma.github.io/)
 
