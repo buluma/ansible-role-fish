@@ -11,8 +11,5 @@ exclude_paths:
   - .github
   - requirements.yml
 
-skip_list:
-  - role-name
-
 enable_list:
   - name[prefix]

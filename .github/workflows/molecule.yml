@@ -63,12 +63,8 @@ jobs:
           - image: "docker-molecule-images"
             tag: "fedora45"
     steps:
-      - name: Checkout Role
-        uses: actions/checkout@v4
-        with:
-          path: "${{ github.repository }}"
-      - name: Running Molecule Test
-        uses: buluma/molecule-action@v25.6.14
+      - name: checkout
+        uses: actions/checkout@v6
         with:
           path: ansible-role-fish
 

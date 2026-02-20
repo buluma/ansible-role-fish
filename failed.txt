@@ -1,0 +1,2 @@
+ansible-role-fish [generator]: ERROR: Unhandled exception when retrieving 'DEFAULT_LOCAL_TMP': [Errno 1] Operation not permitted: '/Users/shadowwalker/.ansible/tmp/ansible-local-842512mgolyjm'
+ansible-role-fish [ansible-lint]:  Namespace: https://old-galaxy.ansible.com/docs/contributing/namespaces.html#galaxy-namespace-limitations Role: https://old-galaxy.ansible.com/docs/contributing/creating_role.html#role-names As an alternative, you can add 'role-name' to either skip_list or warn_list. 
