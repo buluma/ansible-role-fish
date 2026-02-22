@@ -1,12 +1,11 @@
 ---
-
 - name: Print base msg
   ansible.builtin.debug:
     msg: >-
       Testing with Ansible {{ ansible_version.full }} using Python {{ ansible_facts.python_version }}
       on {{ ansible_facts.distribution }} {{ ansible_facts.distribution_version }}
 
-- name: Wait for systemd   # noqa 303
+- name: Wait for systemd # noqa 303
   ansible.builtin.command: systemctl is-system-running
   register: systemd_status
   until: systemd_status.stdout is search('running|degraded')

@@ -1,12 +1,12 @@
 ---
 galaxy_info:
-  author: 'Michael Buluma'
+  author: "Michael Buluma"
   namespace: buluma
   role_name: fish
-  description: 'Install the Friendly Interactive Shell (fish)'
-  license: 'Apache 2.0'
+  description: "Install the Friendly Interactive Shell (fish)"
+  license: "Apache 2.0"
   company: ShadowNet
-  min_ansible_version: '2.12'
+  min_ansible_version: "2.12"
   platforms:
     - name: EL
       versions:
