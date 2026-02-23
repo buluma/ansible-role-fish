@@ -12,42 +12,42 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-  - hosts: all
-    become: true
+- hosts: all
+  become: true
 
-    vars:
-      distros:
-        - Debian9
-        - Debian10
-        - RedHat7
-        - RedHat8
-        - Fedora30
-        - Fedora31
-        - Fedora32
-        - Ubuntu16
-        - Ubuntu18
-        - Ubuntu20
+  vars:
+    distros:
+    - Debian9
+    - Debian10
+    - RedHat7
+    - RedHat8
+    - Fedora30
+    - Fedora31
+    - Fedora32
+    - Ubuntu16
+    - Ubuntu18
+    - Ubuntu20
 
-    tasks:
+  tasks:
 
-      - include_role:
-          name: ansible-role-fish
-        when: ansible_facts.distribution ~ 
-          ansible_facts.distribution_major_version in distros
+  - include_role:
+      name: ansible-role-fish
+    when: ansible_facts.distribution ~ ansible_facts.distribution_major_version 
+      in distros
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-fish/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-  - name: Prepare
-    hosts: all
-    gather_facts: false
-    become: true
-    serial: 30%
+- name: Prepare
+  hosts: all
+  gather_facts: false
+  become: true
+  serial: 30%
 
-    roles:
-      - role: buluma.bootstrap
+  roles:
+  - role: buluma.bootstrap
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
