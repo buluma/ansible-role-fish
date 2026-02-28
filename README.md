@@ -32,7 +32,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
   - include_role:
       name: ansible-role-fish
-    when: ansible_facts.distribution ~ ansible_facts.distribution_major_version 
+    when: ansible_facts.distribution ~ ansible_facts.distribution_major_version
       in distros
 ```
 
@@ -106,4 +106,3 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [Michael Buluma](https://buluma.github.io/)
-
