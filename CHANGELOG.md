@@ -11,6 +11,11 @@
 
 **Merged pull requests:**
 
+- Bump actions/checkout from 4 to 6 [\#31](https://github.com/buluma/ansible-role-fish/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/molecule-action from 24.6.17 to 25.6.14 [\#30](https://github.com/buluma/ansible-role-fish/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/molecule-action from 24.2.0 to 24.6.17 [\#28](https://github.com/buluma/ansible-role-fish/pull/28) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump dependabot/fetch-metadata from 1 to 2 [\#27](https://github.com/buluma/ansible-role-fish/pull/27) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump release-drafter/release-drafter from 5 to 6 [\#25](https://github.com/buluma/ansible-role-fish/pull/25) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#24](https://github.com/buluma/ansible-role-fish/pull/24) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#23](https://github.com/buluma/ansible-role-fish/pull/23) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#22](https://github.com/buluma/ansible-role-fish/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
