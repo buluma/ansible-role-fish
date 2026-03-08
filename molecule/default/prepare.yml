@@ -6,4 +6,4 @@
   serial: 30%
 
   roles:
-  - role: buluma.bootstrap
+    - role: buluma.bootstrap

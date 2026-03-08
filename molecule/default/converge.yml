@@ -4,20 +4,20 @@
 
   vars:
     distros:
-    - Debian9
-    - Debian10
-    - RedHat7
-    - RedHat8
-    - Fedora30
-    - Fedora31
-    - Fedora32
-    - Ubuntu16
-    - Ubuntu18
-    - Ubuntu20
+      - Debian9
+      - Debian10
+      - RedHat7
+      - RedHat8
+      - Fedora30
+      - Fedora31
+      - Fedora32
+      - Ubuntu16
+      - Ubuntu18
+      - Ubuntu20
 
   tasks:
-
-  - include_role:
-      name: ansible-role-fish
-    when: ansible_facts.distribution ~ ansible_facts.distribution_major_version
-      in distros
+    - include_role:
+        name: ansible-role-fish
+      when:
+        ansible_facts.distribution ~ ansible_facts.distribution_major_version
+        in distros
