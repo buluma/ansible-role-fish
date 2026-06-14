@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-fish/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-fish/tree/26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-fish/compare/0.3.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-fish/compare/0.3.0...26.6.0)
 
 **Closed issues:**
 
