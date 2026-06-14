@@ -32,9 +32,8 @@
     - fish
 
 - name: install-RedHat | Install fish
-  action: "{{ ansible_facts['pkg_mgr'] }}"
-  args:
+  ansible.builtin.package:
     name: fish
-    state: "3.6.1"
+    state: present
   tags:
     - fish
