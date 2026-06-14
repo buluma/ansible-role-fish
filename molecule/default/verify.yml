@@ -19,7 +19,7 @@
   tasks:
     - name: Verify
       when:
-        ansible_facts.distribution ~ ansible_facts.distribution_major_version
+        ansible_facts['distribution'] ~ ansible_facts['distribution_major_version']
         in distros
       block:
         - name: Get fish version

@@ -3,9 +3,9 @@
   ansible.builtin.fail:
     msg: Only fish >= 3 is supported on Debian >= 10
   when:
-    - ansible_facts.distribution == 'Debian'
+    - ansible_facts['distribution'] == 'Debian'
     - fish_release_version is version('3', '<')
-    - ansible_facts.distribution_major_version is version('10', '>=')
+    - ansible_facts['distribution_major_version'] is version('10', '>=')
   tags:
     - fish
 

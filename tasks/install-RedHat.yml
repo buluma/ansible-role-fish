@@ -3,9 +3,9 @@
   ansible.builtin.fail:
     msg: Only fish >= 3 is supported on RHEL >= 8
   when:
-    - ansible_facts.distribution in ['RedHat', 'CentOS']
+    - ansible_facts['distribution'] in ['RedHat', 'CentOS']
     - fish_release_version is version('3', '<')
-    - ansible_facts.distribution_major_version is version('8', '>=')
+    - ansible_facts['distribution_major_version'] is version('8', '>=')
   tags:
     - fish
 
@@ -13,9 +13,9 @@
   ansible.builtin.fail:
     msg: Only fish >= 3 is supported on Fedora >= 28
   when:
-    - ansible_facts.distribution == 'Fedora'
+    - ansible_facts['distribution'] == 'Fedora'
     - fish_release_version is version('3', '<')
-    - ansible_facts.distribution_major_version is version('28', '>=')
+    - ansible_facts['distribution_major_version'] is version('28', '>=')
   tags:
     - fish
 
@@ -32,7 +32,7 @@
     - fish
 
 - name: install-RedHat | Install fish
-  action: "{{ ansible_facts.pkg_mgr }}"
+  action: "{{ ansible_facts['pkg_mgr'] }}"
   args:
     name: fish
     state: "3.6.1"
