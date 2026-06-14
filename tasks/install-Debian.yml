@@ -17,11 +17,10 @@
     state: present
 
 - name: install-Debian | Add fish repository key
-  ansible.builtin.apt_key:
-    keyserver: "{{ _fish_apt_keyserver | default(omit) }}"
-    url: "{{ _fish_apt_key_url | default(omit) }}"
-    id: "{{ _fish_apt_key_id | default(omit) }}"
-    state: present
+  ansible.builtin.get_url:
+    url: "{{ _fish_apt_key_url | default('https://' + (_fish_apt_keyserver | default('keyserver.ubuntu.com')) + '/pks/lookup?op=get&search=0x' + (_fish_apt_key_id | default(''))) }}"
+    dest: /etc/apt/trusted.gpg.d/fish.asc
+    mode: "0644"
   tags:
     - fish
 
