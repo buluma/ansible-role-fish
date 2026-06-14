@@ -4,7 +4,7 @@
     msg: >-
       Testing with Ansible {{ ansible_version.full }} using Python {{ ansible_facts['python_version']
       }}
-      on {{ ansible_facts['distribution'] }} {{ ansible_distribution_version
+      on {{ ansible_facts['distribution'] }} {{ ansible_facts['distribution_version']
       }}
 
 - name: Wait for systemd # noqa 303
@@ -28,7 +28,7 @@
     params:
       files:
         - "{{ ansible_facts['os_family'] }}-{{ ansible_facts['distribution_major_version'] }}.yml"
-        - "{{ ansible_facts['distribution'] }}-{{ ansible_distribution_version }}.yml"
+        - "{{ ansible_facts['distribution'] }}-{{ ansible_facts['distribution_version'] }}.yml"
         - "{{ ansible_facts['distribution'] }}.yml"
         - "{{ ansible_facts['os_family'] }}.yml"
       paths:
