@@ -1,5 +1,6 @@
 ---
-_fish_repo_version_string: "{{ _fish_repo_strings['version_' ~ fish_release_version][ansible_facts['distribution']][ansible_facts['distribution_major_version'] | int] }}"
+_fish_repo_version_string: "{{ _fish_repo_strings['version_' ~ fish_release_version][ansible_facts['distribution']][ansible_facts['distribution_major_version'] |
+  int] }}"
 
 _fish_repo_strings:
   version_2:
