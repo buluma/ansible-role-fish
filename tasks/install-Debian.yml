@@ -40,7 +40,8 @@
 
 # _fish_apt_repo_url is a one-line "deb [options] URI SUITE [COMPONENT...]"
 # string, split here into the parts deb822_repository needs.
-- name: install-Debian | Add fish repository
+# The noqa is there because ansible-lint can't validate the templated types.
+- name: install-Debian | Add fish repository  # noqa: args[module]
   ansible.builtin.deb822_repository:
     name: shells_fish_release_{{ fish_release_version }}
     types: "{{ _fish_apt_repo_types }}"
