@@ -90,6 +90,18 @@
         group: root
         mode: "0644"
   always:
+    - name: install-key | Stop the gpg-agent started by the key import
+      ansible.builtin.command:
+        argv:
+          - gpgconf
+          - --homedir
+          - "{{ _fish_key_dir.path }}"
+          - --kill
+          - gpg-agent
+      changed_when: false
+      failed_when: false
+      when: _fish_key_dir.path is defined
+
     - name: install-key | Remove temporary directory
       ansible.builtin.file:
         path: "{{ _fish_key_dir.path }}"
