@@ -15,10 +15,10 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 - name: Converge
   hosts: all
   become: true
+  gather_facts: true
 
-  tasks:
-    - include_role:
-        name: ansible-role-fish
+  roles:
+    - role: buluma.fish
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-fish/blob/master/molecule/default/prepare.yml):
