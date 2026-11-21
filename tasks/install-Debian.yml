@@ -9,6 +9,22 @@
   tags:
     - fish
 
+- name: install-Debian | Ensure the fish repository supports this platform
+  ansible.builtin.assert:
+    that:
+      - not (ansible_facts['distribution'] == 'Debian' and fish_release_version == 3
+        and ansible_facts['distribution_major_version'] is version('13', '>='))
+      - not (ansible_facts['distribution'] == 'Debian' and fish_release_version == 4
+        and ansible_facts['distribution_major_version'] is version('12', '<'))
+      - not (ansible_facts['distribution'] == 'Ubuntu' and fish_release_version == 3
+        and ansible_facts['distribution_version'] is version('25.04', '>='))
+    fail_msg: >-
+      fish release {{ fish_release_version }} has no repository for
+      {{ ansible_facts['distribution'] }} {{ ansible_facts['distribution_version'] }}.
+      Select a supported fish release for this host.
+  tags:
+    - fish
+
 - name: install-Debian | Ensure dependencies are present.
   ansible.builtin.apt:
     name:
@@ -103,7 +119,6 @@
 - name: install-Debian | Install fish
   ansible.builtin.apt:
     name: fish
-    allow_unauthenticated: true
     state: present
     cache_valid_time: 600
   tags:

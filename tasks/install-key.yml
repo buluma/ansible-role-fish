@@ -50,6 +50,15 @@
           with fingerprint {{ _fish_key_id }}, refusing to trust it.
         quiet: true
 
+    - name: install-key | Reject expired or revoked primary keys
+      ansible.builtin.assert:
+        that:
+          - (_fish_key_info.stdout_lines | select('match', '^pub:') | first).split(':')[1] not in ['e', 'r', 'd']
+        fail_msg: >-
+          The signing key from {{ _fish_key_url }} is expired, revoked or disabled.
+          Refresh the upstream repository key before installing fish.
+        quiet: true
+
     # Install only the key that was checked, not the downloaded bytes. gpg here
     # and apt or rpm later could read a crafted file differently, and a
     # keyserver answers with different signatures and armor on each fetch,
